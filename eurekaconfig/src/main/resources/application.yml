@@ -10,8 +10,8 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/ljninglgzxl/config-server/
-          searchPaths: src/main/java/com/eureka/config
+          uri: https://github.com/ljninglgzxl/devocker-springcloud
+          searchPaths: eurekaconfig/src/main/resources/config
           force-pull: true
       label: master
 
