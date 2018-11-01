@@ -1,0 +1,19 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8881/eureka/
+server:
+  port: 8888
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ljninglgzxl/config-server/
+          searchPaths: src/main/java/com/eureka/config
+          force-pull: true
+      label: master
+
+  application:
+    name: eureka-config
