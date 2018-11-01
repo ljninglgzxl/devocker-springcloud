@@ -25,5 +25,5 @@ hs_err_pid*
 .idea/
 eurekaconfig/src/test/
 eurekaserver1/src/test/
-eurekaconfig/eurekaconfig.iml
-eurekaserver1/eurekaserver1.iml
+*.iml
+client1/src/test/
