@@ -27,3 +27,4 @@ eurekaconfig/src/test/
 eurekaserver1/src/test/
 *.iml
 client1/src/test/
+/client1/client1.iml

@@ -1,12 +1,12 @@
 eureka:
     client:
         serviceUrl:
-            defaultZone: http://localhost:7771/eureka/
+            defaultZone: http://localhost:8881/eureka/
 server:
     port: 7771
 spring:
     application:
-        name: eureka-client
+        name: client1
     cloud:
       config:
         label: master
