@@ -16,7 +16,11 @@ spring:
       label: master
   application:
     name: eureka-config
-
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 #本地方式
 #spring:
 #  profiles:
