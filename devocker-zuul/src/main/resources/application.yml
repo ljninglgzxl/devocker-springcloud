@@ -6,7 +6,7 @@ server:
     port: ${server.port}
 spring:
     application:
-        name: client1
+        name: devocker-zuul
     cloud:
       config:
         profile: dev
@@ -17,4 +17,12 @@ spring:
 management:
   security:
     enabled: false
-#        uri: http://localhost:8888/
+zuul:
+  routes:
+    zuul1:
+      path: /zuul1/**
+      serviceId: service-ribbon
+    api-b:
+      path: /zuul2/**
+      serviceId: service-feign
+

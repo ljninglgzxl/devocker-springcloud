@@ -2,6 +2,7 @@ package lg.devocker.dto.test;
 
 public class FirstDTO {
     private Integer numbler;
+    private String failureMessage;
     public Integer getNumbler() {
         return numbler;
     }
@@ -11,4 +12,11 @@ public class FirstDTO {
     }
 
 
+    public String getFailureMessage() {
+        return failureMessage;
+    }
+
+    public void setFailureMessage(String failureMessage) {
+        this.failureMessage = failureMessage;
+    }
 }

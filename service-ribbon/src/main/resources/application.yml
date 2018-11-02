@@ -6,7 +6,7 @@ eureka:
     appname: service-ribbon
 
 server:
-  port: 6661
+  port: 5551
 
 spring:
   application:

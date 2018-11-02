@@ -14,10 +14,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient
-@RefreshScope
-public class ServerServiceApplication {
+public class Application {
     public static void main(String[] args) {
 
-        SpringApplication.run(ServerServiceApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 }

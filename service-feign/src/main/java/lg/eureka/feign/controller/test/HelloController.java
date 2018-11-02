@@ -15,10 +15,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @Autowired
     HelloService helloService;
-    @RequestMapping("/hello")
+    @RequestMapping("/feign")
     public String hello() {
+        System.out.println("feign");
         FirstDTO firstDTO = new FirstDTO();
         firstDTO.setNumbler(123);
+        FirstDTO res = helloService.hello(firstDTO);
+        if (res.getFailureMessage() != null) {
+            return res.getFailureMessage();
+        }
         return helloService.hello(firstDTO).getNumbler().toString();
     }
 }
