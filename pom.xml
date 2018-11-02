@@ -10,6 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>service-ribbon</module>
+        <module>service-feign</module>
+        <module>devocker-api</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -35,9 +37,27 @@
             <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <!--api-->
+        <dependency>
+            <groupId>devocker-springcloud</groupId>
+            <artifactId>devocker-api</artifactId>
+            <version>1.0</version>
         </dependency>
     </dependencies>
 

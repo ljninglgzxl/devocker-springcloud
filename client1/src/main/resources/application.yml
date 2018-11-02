@@ -1,20 +1,16 @@
-eureka:
-    client:
-        serviceUrl:
-            defaultZone: http://localhost:8881/eureka/
-server:
-    port: 7771
-spring:
-    application:
-        name: client1
-    cloud:
-      config:
-        label: master
-        profile: dev
-        discovery:
-          enabled: true
-          service-id: eureka-config
-management:
-  security:
-    enabled: false
-#        uri: http://localhost:8888/
+#eureka:
+#    client:
+#        serviceUrl:
+#            defaultZone: http://localhost:8881/eureka/
+#server:
+#    port: 7771
+#spring:
+#    application:
+#        name: client1
+#    cloud:
+#      config:
+#        profile: dev
+#        discovery:
+#          enabled: true
+#          service-id: eureka-config
+##        uri: http://localhost:8888/
