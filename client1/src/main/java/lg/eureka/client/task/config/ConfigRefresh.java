@@ -16,7 +16,7 @@ import java.io.IOException;
 public class ConfigRefresh {
     /*    @Autowired
         BusRefreshService busRefreshService;*/
-    @Scheduled(cron = "10 * * * * ?")
+    @Scheduled(cron = "0 30 * * * ?")
     private void postBusRefresh() {
         DefaultHttpClient httpClient = new DefaultHttpClient();
         HttpPost httpPost = new HttpPost("http://localhost:8888/bus/refresh");
