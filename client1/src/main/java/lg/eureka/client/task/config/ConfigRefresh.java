@@ -19,7 +19,7 @@ public class ConfigRefresh {
     @Scheduled(cron = "10 * * * * ?")
     private void postBusRefresh() {
         DefaultHttpClient httpClient = new DefaultHttpClient();
-        HttpPost httpPost = new HttpPost("http://localhost:7771/bus/refresh");
+        HttpPost httpPost = new HttpPost("http://localhost:8888/bus/refresh");
         try {
             httpClient.execute(httpPost);
         } catch (IOException e) {
