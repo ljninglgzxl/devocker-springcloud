@@ -2,7 +2,6 @@ package lg.eureka.client.task.config;
 
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.impl.conn.DefaultManagedHttpClientConnection;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -15,8 +14,8 @@ import java.io.IOException;
  */
 @Component
 public class ConfigRefresh {
-/*    @Autowired
-    BusRefreshService busRefreshService;*/
+    /*    @Autowired
+        BusRefreshService busRefreshService;*/
     @Scheduled(cron = "10 * * * * ?")
     private void postBusRefresh() {
         DefaultHttpClient httpClient = new DefaultHttpClient();
@@ -24,7 +23,7 @@ public class ConfigRefresh {
         try {
             httpClient.execute(httpPost);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(e.toString().substring(0,20));
         }
     }
 }

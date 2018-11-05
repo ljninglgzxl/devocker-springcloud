@@ -21,7 +21,7 @@ public class HelloServiceImpl implements HelloService {
     @Override
     @RequestMapping("/b")
     public FirstDTO hello(FirstDTO firstDTO) {
-        firstDTO.setNumbler(Integer.valueOf(number)+766);
+        firstDTO.setNumbler(Integer.valueOf(number));
         return firstDTO;
     }
 }
