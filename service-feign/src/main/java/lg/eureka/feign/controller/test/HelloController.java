@@ -3,6 +3,7 @@ package lg.eureka.feign.controller.test;
 import lg.devocker.api.test.HelloService;
 import lg.devocker.dto.test.FirstDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @Autowired
     HelloService helloService;
+    @Value("${config.service.id}")
+    String id;
     @RequestMapping("/feign")
     public String hello() {
         System.out.println("feign");
@@ -24,6 +27,6 @@ public class HelloController {
         if (res.getFailureMessage() != null) {
             return res.getFailureMessage();
         }
-        return helloService.hello(firstDTO).getNumbler().toString();
+        return helloService.hello(firstDTO).getNumbler().toString()+id;
     }
 }

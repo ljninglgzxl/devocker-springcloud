@@ -4,6 +4,24 @@ eureka:
             defaultZone: http://localhost:8881/eureka/
 server:
     port: 6661
+#spring:
+#  application:
+#    name: service-feign
+
+
 spring:
-  application:
-    name: service-feign
+    application:
+        name: service-feign
+    cloud:
+      config:
+        profile: dev
+        discovery:
+          enabled: true
+          service-id: ${config.service.id}
+#          service-id: ${config.service.id}}
+        name: ${spring.application.name},config-center
+    rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest

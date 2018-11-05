@@ -12,10 +12,8 @@ import java.io.IOException;
  * @date 2018-11-02
  * &Desc 定时请求bus/refresh,刷新配置
  */
-@Component
+/*@Component
 public class ConfigRefresh {
-    /*    @Autowired
-        BusRefreshService busRefreshService;*/
     @Scheduled(cron = "0 30 * * * ?")
     private void postBusRefresh() {
         DefaultHttpClient httpClient = new DefaultHttpClient();
@@ -26,4 +24,4 @@ public class ConfigRefresh {
             System.out.println(e.toString().substring(0,20));
         }
     }
-}
+}*/
