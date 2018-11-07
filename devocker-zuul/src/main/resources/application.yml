@@ -1,7 +1,7 @@
 eureka:
     client:
         serviceUrl:
-            defaultZone: ${eureka.server.defaultZone}
+            defaultZone: ${dev.server.defaultZone}
 server:
     port: ${server.port}
 spring:

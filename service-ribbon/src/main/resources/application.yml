@@ -1,7 +1,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8881/eureka/
+      defaultZone: http://localhost:8881/dev/
   instance:
     appname: service-ribbon
 

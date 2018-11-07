@@ -1,0 +1,25 @@
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: ${dev.server.defaultZone}
+server:
+    port: ${server.port}
+spring:
+    application:
+        name: pipeline-service
+    cloud:
+      config:
+        profile: dev
+        discovery:
+          enabled: true
+          service-id: ${config.service.id}
+        name: ${spring.application.name},config-center
+    rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+management:
+  security:
+    enabled: false
+#        uri: http://localhost:8888/

@@ -3,12 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>devocker-springcloud</groupId>
+    <groupId>com.lg.dev</groupId>
     <artifactId>devocker-api</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.lg.jdk>1.0</project.lg.jdk>
     </properties>
 
     <parent>
@@ -22,6 +23,19 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+        <!--jdk-->
+        <dependency>
+            <groupId>com.lg.jdk</groupId>
+            <artifactId>lg-jdk</artifactId>
+            <version>${project.lg.jdk}</version>
+        </dependency>
+        <!--bean-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.4</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

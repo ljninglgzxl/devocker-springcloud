@@ -1,7 +1,7 @@
 #eureka:
 #  client:
 #    serviceUrl:
-#      defaultZone: http://localhost:8881/eureka/
+#      defaultZone: http://localhost:8881/dev/
 server:
   port: 8888
 #git 方式
@@ -34,4 +34,4 @@ management:
 #        native:
 #          search-locations: classpath:/config/
 #  application:
-#    name: eureka-config
+#    name: dev-config
