@@ -27,6 +27,6 @@ public class HelloController {
         if (res.getFailureMessage() != null) {
             return res.getFailureMessage();
         }
-        return helloService.hello(firstDTO).getNumbler().toString()+id;
+        return res.getNumbler().toString()+id;
     }
 }

@@ -15,11 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * &Desc build service
  */
 @FeignClient(value = "pipeline-service")
-@RequestMapping("/pipeline")
 public interface BuildService {
     /**
      * start build pipeline
      */
-    @RequestMapping("/startBuild")
+    @RequestMapping("/pipeline/startBuild")
     Result<BuildResDTO> startBuild(@RequestBody Request<BuildReqDTO> request);
 }

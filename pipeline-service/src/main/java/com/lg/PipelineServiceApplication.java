@@ -1,19 +1,20 @@
-package com.lg.dev;
+package com.lg;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @author lg
- * @date 2018-10-31
- * &Desc client demo
+ * @date 2018-11-06
+ * &Desc main
  */
 @SpringBootApplication
 @EnableEurekaClient
-public class Application {
+@EnableCaching
+public class PipelineServiceApplication {
     public static void main(String[] args) {
-
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(PipelineServiceApplication.class, args);
     }
 }
